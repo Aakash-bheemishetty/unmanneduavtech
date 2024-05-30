@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unmanned UAV Tech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="styles.css">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script>
+  AOS.init();
+</script>
+<style>
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body, html {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.w3-display-container {
+  width: 100%;
+  height: 100vh;
+}
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+}
+.slide-images {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.img-container {
+  flex: 1 0 100%;
+  position: relative;
+  min-width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+.image-wrapper {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.image-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  color: white;
+  z-index: 2;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s ease;
+  border-radius: 0 0 0 0;
+  user-select: none;
+  background-color: grey;
+  border: none;
+}
+.arrow:hover {
+  background-color: black;
+}
+.next {
+  right: 0;
+}
+.prev {
+  left: 0;
+}
+.w3-dropdown-hover:hover .w3-dropdown-content {
+  display: block;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .w3-display-container {
+    height: 80vh; /* Adjust the height for smaller screens */
+  }
+  .overlay-text {
+    font-size: 2em; /* Reduce font size for smaller screens */
+  }
+  .arrow {
+    font-size: 16px; /* Adjust arrow size for smaller screens */
+    padding: 10px; /* Adjust arrow padding for smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .w3-display-container {
+    height: 70vh; /* Further adjust the height for very small screens */
+  }
+  .overlay-text {
+    font-size: 1.5em; /* Further reduce font size for very small screens */
+  }
+  .arrow {
+    font-size: 14px; /* Further adjust arrow size for very small screens */
+    padding: 8px; /* Further adjust arrow padding for very small screens */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button">Unmanned UAV</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#About" class="w3-bar-item w3-button">About</a>
+      <div class="w3-dropdown-hover">
+        <button class="w3-bar-item w3-button">Services<span class="dropdown-symbol">&#9660;</span></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#Power Line" class="w3-bar-item w3-button">Power Line</a>
+          <a href="#Railways" class="w3-bar-item w3-button">Railways</a>
+          <a href="#Agriculture" class="w3-bar-item w3-button">Agriculture</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-bar-item w3-button">Customisable <span class="dropdown-symbol">&#9660;</span></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#High Payload" class="w3-bar-item w3-button">High Payload</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<header class="w3-display-container" id="home">
+  <div class="slider-container">
+    <div class="slide-images">
+      <div class="img-container">
+        <div class="image-wrapper" style="background-image: url('photos/animated2.jpg');" alt="Slide 1">
+          <div class="overlay"></div>
+          <div class="overlay-text">Welcome to Unmanned UAV<br><h6>End to end technology solutions from high quality hardware to
+             Al and ML based data / image processing solutions for your needs.</h6></div>
+        </div>
+      </div>
+      <div class="img-container">
+        <div class="image-wrapper" style="background-image: url('photos/military.jpg');" alt="Slide 2">
+          <div class="overlay"></div>
+          <div class="overlay-text">Industrial/Military Grade Custom Drones<br><h6>Extreme High quality drones with custom payload,high flight times and stable 
+            at extreme heights and low temperatures.</h6></div>
+        </div>
+      </div>
+      <div class="img-container">
+        <div class="image-wrapper" style="background-image: url('photos/show.jpg');" alt="Slide 3">
+          <div class="overlay"></div>
+          <div class="overlay-text">MESMERISING DRONE SHOWS<br><h6>India's only indigenous drone swarm technology enabling up to 1000 drones moving in perfect sync.</h6></div>
+        </div>
+      </div>
+    </div>
+    <button class="arrow prev" onclick="slide(-1)">&#10094;</button>
+    <button class="arrow next" onclick="slide(1)">&#10095;</button>
+  </div>
+</header>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.img-container');
+  const slideImages = document.querySelector('.slide-images');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  
+  function slide(direction) {
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      const offset = -currentIndex * 100; // 100% per slide
+      slideImages.style.transform = `translateX(${offset}%)`;
+  
+      // Toggle visibility of arrows based on current index
+      prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+      nextBtn.style.display = currentIndex === slides.length - 1 ? 'none' : 'block';
+  }
+  
+  // Initialize slide visibility
+  slide(0);
+  </script>
+
+<!-- Page content -->
+<div class="w3-container w3-padding-32" id="About" data-aos="fade-up">
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>About</b></h2>
+  <div class="container" data-aos="fade-right">
+      <img src="photos/kal-visuals-Ve7iqUNkGsA-unsplash.jpg" alt="Company logo" class="logo">
+      <div class="text" data-aos="fade-left">
+          <h5>Capturing serial data is now cost efficient allowing you to collect data with more 
+              Frequency and detail than satellite imagery. Our platform powers applications in construction,
+              solar, asset management, architecture and many other industries.
+          </h5>
+          <h5>Aerial Data Capture Solutions:-Fully automated aerial mapping platforms for easy and accurate aerial data acquisition, 
+              Access 2D and 3D maps of your site, with 1 cm per pixel resolution.
+          </h5>
+          <h5>Data To Optimize Your Costs:-On demand data helps optimize, cut costs. Our applications analyze aerial data to streamline your processes and optimize
+              costs. Use our industry specific application to make the most of your data.
+          </h5>
+          <h5>Upgrade Safety Standards:-Improve your safety standards with HoverX. Survey hazardous areas like mines and us Survey minimal ground access.
+              Send in our UAVs instead of putting your employees at risk.
+          </h5>
+          <h5>Integrated With Cloud:-Improve collaboration and communication with our cloud based application, Workspace. Access your data within hours 
+              of flying and share the reports with anyone across the globe.
+          </h5>
+          <h5>High Orthosis:-<br>
+              1. Up to date ground-truth results in substantial efficiency. Track real time progress and conduct inspections 
+              without downtime. Track multiple job sites from one office and share the progress over the internet within minutes 
+              of flying.
+              <br>2. Know what is happening with your asset and keep a record of changes. We survey your site every month or2 months 
+              (depending on your requirement) so you can monitor your assets from anywhere in the globe.
+              <br>3. Reduce the cost of insurance related processes from claims adjustment to post-catastrophe claims settlements for 
+              customers, to weeding out fraudulent agricultural claims. We are Insurance Industry's next game-changer.
+          </h5>
+      </div>
+  </div>
+  <div class="container" data-aos="fade-right">
+      <div class="text" data-aos="fade-left">
+          <h3><b>Extract Accurate Topography</b></h3>
+          <h5>1. Improve construction site productivity by analyzing large quantity of data. Drones give access to data that are not
+              easy to collect. They act as surveyors and topographers but are more precise, quicker and safer as they limit human 
+              intervention on dangerous sites.
+              <br>2. We offer solutions for monitoring, optimization and surveying large earthmoving works without any downtime. 
+              Calculate accurate volumes to be moved and plan your job efficiently.
+              <br>3. Create mine models, resource concentrations models, extraction plans and calculate volumetric measures all at a 
+              fraction of the time and cost of traditional surveying techniques.
+              <br>4. High accuracy 3D maps can help inspect large structures and archeological monuments. 3D models with accurate textures
+              help inspect cracks and other structural faults without the need for anyone to go near the inspection zone.
+              <br>5. Access 3D maps of your site, with 1 cm per pixel resolution, updated as often as you like. Up to the minute ground-truth
+              yields substantial efficiency in tracking progress and conducting inspections while reducing costs and downtime.
+              <br>6. Send in our UAVs to get real time situation of a natural disaster or catastrophe like landslides, floods, train crashes 
+              etc Asses damage and plan for the rescue operations based on the information brought in by our UAVs.
+              <br>7. A comprehensive suite of measurement tools makes it easy to calculate distance, area & volumes. Arc lengths, radius and 
+              elevation tools complete the kit, making it possible to produce a detailed survey without leaving the office.
+              <br>8. Plan your next project with a powerful suite of business-ready tools designed to help you quickly and easily plan your work 
+              site without having to travel there. Create, save and collaborate on projects with a simple workflow.
+              <br>9. Share your maps securely with your coworkers or customers. Collaborate on projects with a simple workflow.
+              <br>10. Open the core data in interfaces you are used to, including Autodesk, Esri etc. Access all the RAW formats and export them
+              to your existing workflow.
+          </h5>
+      </div>
+      <img src="photos/constr2.jpg" alt="Company logo" class="logo" data-aos="fade-right">
+  </div>
+</div>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+   AOS.init({
+        duration: 2000 // Duration in milliseconds (2000ms = 2 seconds)
+    });
+</script>
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="Power Line" data-aos="fade-up">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>Power Line</b></h2>
+    <div class="photo-container">
+      <div class="photo-section" data-aos="fade-right">
+        <img src="photos/p2.jpg" alt="Image 1">
+        <div class="ext">
+          <h2><b>Survey Technology</b></h2>
+          <p>Aerial Survey->Data processing-> Visualization->Analysis<br>•The survey technology consists of field works and office work.
+            <br>•The field work includes aerial photography with an unmanned aircraft system and high voltage cable inspection by quadcopter.</p>
+        </div>
+      </div>
+      <div class="photo-section" data-aos="fade-left">
+        <img src="photos/p1.jpg" alt="Image 2">
+        <div class="ext">
+          <h2><b>Powerline mapping</b></h2>
+          <h5>Data obtained from UAV</h5>
+        <p>&bull;Create orthophoto and digital terrain model.
+        <br>&bull;Determine the exact geodetic coordinates of power line towers.
+        <br>&bull;Obtain the height of transmission towers.
+        <br>&bull;Determine the distance between towers and power line overall length.</p>
+        </div>
+      </div>
+      <div class="photo-section" data-aos="fade-right">
+        <img src="photos/p3.jpg" alt="Image 3">
+        <div class="ext">
+          <h2><b>Determine wire position</b></h2>
+          <p>Geoscan technology allows to determine position of wires and their unchored points with 15 cm accuracy.
+            <br>Reconstructed models allow for engineering analysis:
+            <br>&bull;Measurement of distances between wires.
+            <br>&bull;Determination of wires sag, vertical and lateral dimensions.</p>
+        </div>
+      </div>
+      <div class="photo-section" data-aos="fade-left">
+        <img src="photos/p4.jpg" alt="Image 4">
+        <div class="ext">
+          <h2><b>Detailed close up inspection</b></h2>
+          <p>&bull;Geoscan technology allows for visual inspection of towers and detection of wires damages without using hydraulic lifts and power supply break downs.
+            <br>&bull;It is possible to survey the power transmission lines in hard-to-reach areas during floods, in wetlands and in areas with complex terrain.</p>     
+        </div>
+      </div>
+    </div>
+    
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="Railways" data-aos="fade-up">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>Railways</b></h2>
+    <div class="container" data-aos="fade-left">
+      <img src="photos/r3.jpg" alt="Company logo" class="logo">
+      <div class="text" data-aos="fade-right">
+        <h5><b>Agenda:-</b>Project planning & surveying solution,improving the process of contour profiling & elevation profiles and reduce constraints 
+          such as humans risk,costs & time of operations.</h5>
+          <h5>&bull;With an array of different drones and camera options we have something that will fit your requirements.
+            <br>&bull;Offering some of the latest technology currently available and able to lift most of todays cameras including spectrum/oblique/ LIDAR/Surveillance systems.
+            <br>&bull;All aircraft's are capable of streaming live HD video feed.
+            <br>&bull;We are the only company in the country to posses a WPC certification to operate drones and carry out different kinds of services.
+            <br>&bull;Flight time ranges from 12 mins to 90 mins depending on the type of drone and can cover up to 5 km's in a single flight.
+            <br>&bull;We specialize in designing new drones as per project requirements as well.
+            <br>&bull;Our fleet includes UTI A600 Pro, UTI Aspire & Aspire Pro.
+            <br>&bull;We also provide thermal imaging and topographic surveying.<br><b>Thermal Imaging advantages:-</b>
+            <br>&bull;Detection of sand and rocks on the train track
+            <br>&bull;Extreme climatic conditions
+                <br>&bull;Compatibility of RPAS with high speed lines
+                <br>&bull;Movements in earthworks
+                <br>&bull;Structural inspections
+                <br>&bull;IR cameras
+                <br>&bull;Digital Surface Modeling</h5>
+      </div>
+    </div>   
+    <br>
+    <h3><b>Drone in survey</b></h3> 
+    <div class="survey-container">
+      <div class="survey-section" data-aos="fade-right">
+          <img src="photos/r1.jpg" alt="Manual Survey">
+          <div class="survey-content">
+              <h3><b>Manual Survey</b></h3>
+              <h5>
+                  &bull;Costly and pose safety challenges<br>
+                  &bull;Digitizing, monitoring and inspecting these assets require a lot more effort.<br>
+                  &bull;Paper and electronic reporting to owners, engineers, and decision makers.<br>
+                  &bull;Time Consuming to conduct surveys of large areas.<br>
+                  &bull;Tedious job for obtaining contours and profiles.
+              </h5>
+          </div>
+      </div>
+      <div class="survey-section" data-aos="fade-left">
+          <img src="photos/r4.webp" alt="Automatic Survey">
+          <div class="survey-content">
+              <h3><b>Automatic Survey</b></h3>
+              <h5>
+                  &bull;10x faster, fully automated.<br>
+                  &bull;Obtaining a visual reference alongside GPS tagging as reports to aid in decision making.<br>
+                  &bull;Using UAVs to Rail track, structure inspections and side inventory analysis.<br>
+                  &bull;Use of Drone imagery & terrestrial photos to improve the documentation of defects.<br>
+                  &bull;3d Modelling of the structure and inspection data Cover large areas or long linear flight paths in a short time.<br>
+                  &bull;Enhanced investigation capabilities versus traditional methods (on-site human inspections).
+              </h5>
+          </div>
+      </div>
+  </div>
+  <br>
+  <div class="container" data-aos="fade-left">
+    <div class="text">
+      <h3><b>Our deliverables:</b></h3><h5>1.High resolution Video capture of the Project (4K resolution).
+                <br>2.Comprehensive Video of the entire project with important information overlaid on the video.
+                <br>3. High resolution ortho photo of the project (2 cm/pix).
+                <br>4. Digital Surface / Terrain Model of the project.
+                <br>5. GIS | CAD Drawing) 2D/3D feature extraction of the project based on High resolution ortho photo.
+                <br>6. 3D Reconstructed model of the entire project which could be used for volume and distance measurements.
+                <br>7. Google Earth compatible file with project data overlay.</h5>
+                <h3><b>Infrastructure planning:</b></h3>
+                <h5>1.New route/network planning.
+                  <br>2.Modifying built structure,new tracks,and facility.
+                  <br>3.DEM analysis.
+                  <br>4.New infrastructure planning like stations,etc.
+                  <br>5.Safety and emergency services.</h5>
+                  <h3><b>Additional services:</b></h3>
+                  <h5>1.Progress Monitoring.
+                  <br>2.Volumetric Analysis.
+                  <br>3.Asset Management.
+                  <br>4.Building Information Modelling.
+        
+    </div>
+    <img src="photos/r2.jpg" alt="Company logo" class="logo" data-aos="fade-right">
+  </div>        
+   </div>
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="Agriculture" data-aos="fade-up">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>Agriculture</b></h2>
+    <div class="container" data-aos="fade-left">
+      <div class="left-half">
+          <img src="photos/agri.jpg" alt="Left Image">
+      </div>
+      <div class="right-half" data-aos="fade-right">
+          <div class="top-right">
+            <h5>Automated UAV aerial surveying+Text(precise camera center coordinates)-> Automated data processing->Visualisation,analysis,export.<br><b>UAV payload:</b>
+              Camera Sony a5000/a5100,IR multispectral camera,Thermal camera,Broadband data transmission link,Gyrostabilised platform with FullHD video.<br><b>Technology Overview:</b>When sunlight strikes a plant, certain wavelengths of spectrum are absorbed and other wavelengths are reflected. The pigment of plant leaves, chlorophyll, strongly absorbs visible light. The cell structure of the leaves,
+               on the other hand, strongly reflects the near-infrared light. Thus, the reflectivity in these two bands are strongly relevant to crop health.</h5>           
+          </div>
+          <div class="bottom-right" data-aos="fade-right">
+              <img src="photos/agri2.webp" alt="Bottom Right Image">
+          </div>
+      </div>
+  </div>
+  <br>
+  <h3><b>Use-cases:</b></h3>
+  <div class="photo-container">
+    <div class="photo-section" data-aos="fade-right">
+      <img src="photos/agri2_1.jpg" alt="Image 1">
+      <div class="ext">
+        <h2><b>Root-crops volume measuring</b></h2>
+        <h5>Root-crops volume in open storages can be easily calculated by 3D-model created on aerial surveying data.
+          At the same time thermal surveying allows to control temperature condition and make a decision to use one or another bank in the first instance.</h5>
+      </div>
+    </div>
+    <div class="photo-section" data-aos="fade-left">
+      <img src="photos/agri2_3.jpg" alt="Image 2">
+      <div class="ext">
+        <h2><b>DEM Analysis</b></h2>
+        <h5>In addition to three-dimension visualization of relief Sputnik Agro also allows to:-Convert digital elevation model to slope map,Create contours and Calculate drainless areas and surface water flow direction.
+          Obtained data are indispensable for:-Preventing of sink appearance.</h5>
+      </div>
+    </div>
+    <div class="photo-section" data-aos="fade-right">
+      <img src="photos/agri2_4.jpg" alt="Image 3">
+      <div class="ext">
+        <h2><b>Land Inventory and Management</b></h2>
+        <h5>In addition to three-dimension visualization of relief Sputnik Agro also allows to:-Convert digital elevation model to slope map,Create contours and Calculate drainless areas 
+          and surface water flow direction.</h5>
+      </div>
+    </div>
+    <div class="photo-section" data-aos="fade-left">
+      <img src="photos/agri2_2.jpg" alt="Image 4">
+      <div class="ext">
+        <h2><b>Multi-spectral monitoring</b></h2>
+        <h5>Sputnik Agro toolset allows for automated classification and vectorization of vegetation indices maps. The result is a prescription maps for variable rate application.
+          Vector maps in SHP format can be easily converted to a particular model format.</h5>        
+      </div>
+    </div>
+  </div>
+       
+
+<!-- ======= Events Section ======= -->
+<div class="w3-container w3-padding-32" id="High Payload" data-aos="fade-up">
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>High Payload</b></h2>
+  <div class="mage-container" data-aos="fade-left">
+    <div class="mage-wrapper" style="background-image: url('photos/highpay_3.webp');">
+      <div class="verlay"></div>
+      <div class="verlay-text">Max lifting weight: 5 kg (22 lbs)<br>
+        Flight time: 40 min<br>
+        Max speed: 55 km/h (no wind)<br>
+        Max transmission distance: 20 km<br>
+        Box Dimensions: 1057×605×630（L×W×H, mm）<br>
+        Max take-off weight: 25.4 kg<br>
+        Max wind resistance: Level 8<br>
+        Protection level: IP55</div>
+    </div>
+    <div class="mage-wrapper" style="background-image: url('photos/heavy-lift-drone-1536x1024.jpg');">
+      <div class="verlay"></div>
+      <div class="verlay-text">Max lifting weight: 10 kg (22 lbs)<br>
+        Flight time: 62 min<br>
+        Max speed: 65 km/h (no wind)<br>
+        Max transmission distance: 25 km<br>
+        Box Dimensions: 1057×605×630（L×W×H, mm）<br>
+        Max take-off weight: 29.2 kg<br>
+        Max wind resistance: Level 8<br>
+        Protection level: IP55</div>
+    </div>
+    <div class="mage-wrapper" style="background-image: url('photos/ee8c589fa09d2b04a1c4749b80399d24.jpg');">
+      <div class="verlay"></div>
+      <div class="verlay-text">Max lifting weight: 25 kg (22 lbs)<br>
+        Flight time: 75 min<br>
+        Max speed: 68.3 km/h (no wind)<br>
+        Max transmission distance: 25 km<br>
+        Box Dimensions: 2060×1050×1300（L×W×H, mm）<br>
+        Max take-off weight: 35 kg<br>
+        Max wind resistance: Level 8<br>
+        Protection level: IP55</div>
+    </div>
+  </div>
+  </div>
+  
+  <footer class="w3-center w3-black w3-panel w3-padding-16">
+    <p><b>The End</b><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green"></a></p>
+    </footer>
+    </div>
+
+<!-- End page content -->
+</div>
+
+
+</body>
+</html>
